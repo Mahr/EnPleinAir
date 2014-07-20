@@ -10,8 +10,7 @@
 
 @interface EPASlidingImageViewController : UIViewController <UIScrollViewDelegate>
 
-@property(nonatomic, strong) UIScrollView *scrollView;
-@property(nonatomic, strong) UIScrollView *imageGallery;
+@property (weak, nonatomic) IBOutlet UIScrollView *imageGallery;
 
 @property(nonatomic, strong) NSMutableArray *photos;
 

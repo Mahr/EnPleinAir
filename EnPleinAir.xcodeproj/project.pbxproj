@@ -20,7 +20,9 @@
 		14B068C0191872B7006D9CC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14B068BE191872B7006D9CC0 /* InfoPlist.strings */; };
 		14B068C2191872B7006D9CC0 /* EnPleinAirTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B068C1191872B7006D9CC0 /* EnPleinAirTests.m */; };
 		14B068CE19187416006D9CC0 /* EPASlidingImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B068CC19187416006D9CC0 /* EPASlidingImageViewController.m */; };
-		14B068CF19187416006D9CC0 /* EPASlidingImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B068CD19187416006D9CC0 /* EPASlidingImageViewController.xib */; };
+		26283841197C4CB400A7029E /* EnPleinAirStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26283840197C4CB400A7029E /* EnPleinAirStoryboard.storyboard */; };
+		63206262E6D4B962DF675D1D /* EPALandscape.m in Sources */ = {isa = PBXBuildFile; fileRef = 63206ED613FDE82692ADA1E8 /* EPALandscape.m */; };
+		FED54C346E5942E1A87CEBD0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B17A70BED247F8A1A6B876 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		122D4602F6864430875A0A0E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		14B06899191872B7006D9CC0 /* EnPleinAir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnPleinAir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14B0689C191872B7006D9CC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		14B0689E191872B7006D9CC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -52,7 +55,11 @@
 		14B068C1191872B7006D9CC0 /* EnPleinAirTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnPleinAirTests.m; sourceTree = "<group>"; };
 		14B068CB19187416006D9CC0 /* EPASlidingImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPASlidingImageViewController.h; sourceTree = "<group>"; };
 		14B068CC19187416006D9CC0 /* EPASlidingImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPASlidingImageViewController.m; sourceTree = "<group>"; };
-		14B068CD19187416006D9CC0 /* EPASlidingImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EPASlidingImageViewController.xib; sourceTree = "<group>"; };
+		25B17A70BED247F8A1A6B876 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		26283840197C4CB400A7029E /* EnPleinAirStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EnPleinAirStoryboard.storyboard; sourceTree = "<group>"; };
+		26283842197C4EF100A7029E /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		63206D48AE080785DF0B2D0D /* EPALandscape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPALandscape.h; sourceTree = "<group>"; };
+		63206ED613FDE82692ADA1E8 /* EPALandscape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPALandscape.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +70,7 @@
 				14B0689F191872B7006D9CC0 /* CoreGraphics.framework in Frameworks */,
 				14B068A1191872B7006D9CC0 /* UIKit.framework in Frameworks */,
 				14B0689D191872B7006D9CC0 /* Foundation.framework in Frameworks */,
+				FED54C346E5942E1A87CEBD0 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +94,7 @@
 				14B068BB191872B7006D9CC0 /* EnPleinAirTests */,
 				14B0689B191872B7006D9CC0 /* Frameworks */,
 				14B0689A191872B7006D9CC0 /* Products */,
+				122D4602F6864430875A0A0E /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +114,7 @@
 				14B0689E191872B7006D9CC0 /* CoreGraphics.framework */,
 				14B068A0191872B7006D9CC0 /* UIKit.framework */,
 				14B068B5191872B7006D9CC0 /* XCTest.framework */,
+				25B17A70BED247F8A1A6B876 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -118,7 +128,9 @@
 				14B068A3191872B7006D9CC0 /* Supporting Files */,
 				14B068CB19187416006D9CC0 /* EPASlidingImageViewController.h */,
 				14B068CC19187416006D9CC0 /* EPASlidingImageViewController.m */,
-				14B068CD19187416006D9CC0 /* EPASlidingImageViewController.xib */,
+				26283840197C4CB400A7029E /* EnPleinAirStoryboard.storyboard */,
+				26283842197C4EF100A7029E /* constants.h */,
+				63206AD747C174EEB3A62A00 /* API */,
 			);
 			path = EnPleinAir;
 			sourceTree = "<group>";
@@ -152,6 +164,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		63206AD747C174EEB3A62A00 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				63206ED613FDE82692ADA1E8 /* EPALandscape.m */,
+				63206D48AE080785DF0B2D0D /* EPALandscape.h */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +180,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14B068C5191872B7006D9CC0 /* Build configuration list for PBXNativeTarget "EnPleinAir" */;
 			buildPhases = (
+				F81056864BDE45D59393E3BB /* Check Pods Manifest.lock */,
 				14B06895191872B7006D9CC0 /* Sources */,
 				14B06896191872B7006D9CC0 /* Frameworks */,
 				14B06897191872B7006D9CC0 /* Resources */,
+				664AE558BC984A1F885A16F4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,8 +251,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14B068CF19187416006D9CC0 /* EPASlidingImageViewController.xib in Resources */,
 				14B068A7191872B7006D9CC0 /* InfoPlist.strings in Resources */,
+				26283841197C4CB400A7029E /* EnPleinAirStoryboard.storyboard in Resources */,
 				14B068AF191872B7006D9CC0 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,6 +267,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		664AE558BC984A1F885A16F4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F81056864BDE45D59393E3BB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		14B06895191872B7006D9CC0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -252,6 +308,7 @@
 				14B068CE19187416006D9CC0 /* EPASlidingImageViewController.m in Sources */,
 				14B068A9191872B7006D9CC0 /* main.m in Sources */,
 				14B068AD191872B7006D9CC0 /* EPAAppDelegate.m in Sources */,
+				63206262E6D4B962DF675D1D /* EPALandscape.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +422,7 @@
 		};
 		14B068C6191872B7006D9CC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 122D4602F6864430875A0A0E /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -372,12 +430,14 @@
 				GCC_PREFIX_HEADER = "EnPleinAir/EnPleinAir-Prefix.pch";
 				INFOPLIST_FILE = "EnPleinAir/EnPleinAir-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		14B068C7191872B7006D9CC0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 122D4602F6864430875A0A0E /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -385,6 +445,7 @@
 				GCC_PREFIX_HEADER = "EnPleinAir/EnPleinAir-Prefix.pch";
 				INFOPLIST_FILE = "EnPleinAir/EnPleinAir-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -448,6 +509,7 @@
 				14B068C7191872B7006D9CC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		14B068C8191872B7006D9CC0 /* Build configuration list for PBXNativeTarget "EnPleinAirTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +518,7 @@
 				14B068CA191872B7006D9CC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

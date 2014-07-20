@@ -1,7 +1,5 @@
 __author__ = 'seanbrady'
 
-__author__ = 'seanbrady'
-
 import wsgiref.handlers
 import logging
 
@@ -31,4 +29,5 @@ class GetLandscapes(webapp2.RequestHandler):
         for landscape in qry.fetch(10, offset=0): # Skip the first 20
             resArray.append(landscape.toJson())
 
+        self.response.headers['Content-Type'] = "application/json"
         self.response.write(json.dumps(resArray))

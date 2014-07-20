@@ -12,14 +12,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    UINavigationController *navController = [[UINavigationController alloc] init];
-    self.window.rootViewController = navController;
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    Override point for customization after application launch.
+//    self.window.backgroundColor = [UIColor whiteColor];
+//    UINavigationController *navController = [[UINavigationController alloc] init];
+//    self.window.rootViewController = navController;
     
-    EPASlidingImageViewController *svc = [[EPASlidingImageViewController alloc] init];
-    [navController pushViewController:svc animated:NO];
+//    EPASlidingImageViewController *svc = [[EPASlidingImageViewController alloc] init];
+//    [navController pushViewController:svc animated:NO];
     
     [self.window makeKeyAndVisible];
     return YES;

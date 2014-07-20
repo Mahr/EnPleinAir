@@ -7,6 +7,11 @@
 //
 
 #import "EPASlidingImageViewController.h"
+#import "AFHTTPRequestOperation.h"
+#import "AFHTTPRequestOperationManager.h"
+#import "constants.h"
+#import "EPALandscape.h"
+#import "UIImageView+WebCache.h"
 
 @interface EPASlidingImageViewController ()
 
@@ -33,47 +38,42 @@
     
     float contentWidth = 0;
     
-    // Init the scroll view if it hasn't yet been initialized
-    UIScrollView *imageGallery = [[UIScrollView alloc] initWithFrame:self.view.bounds];
-    self.imageGallery = imageGallery;
-    imageGallery.pagingEnabled = YES;
-    imageGallery.showsHorizontalScrollIndicator = NO;
-    imageGallery.showsVerticalScrollIndicator = NO;
-    imageGallery.scrollsToTop = NO;
-    imageGallery.delegate = self;
-    imageGallery.bounces = NO;
+
+    _imageGallery.scrollsToTop = NO;
+    _imageGallery.delegate = self;
+
     self.automaticallyAdjustsScrollViewInsets = NO;
-    
-    [self.view addSubview:imageGallery];
-    
-    self.photos = [@[] mutableCopy];
-    
-    NSArray *pho = @[@"1", @"2"];
-    
-    
-    for (NSString *photo in pho) {
-        NSLog(@"photo: %@", photo);
-        CGRect imgFrame = CGRectMake(contentWidth, 0, 320, self.view.frame.size.height);
-        UIImageView *photoView = [[UIImageView alloc] initWithFrame:imgFrame];
-        photoView.contentMode = UIViewContentModeScaleAspectFit;
-        photoView.clipsToBounds = YES;
-        photoView.backgroundColor = [UIColor clearColor]; // Allow spinny circle to show through
-        [self.imageGallery addSubview:photoView];
-        [self.photos addObject:photoView];
-        photoView.image = [UIImage imageNamed:photo];
-;
-        photoView.frame = imgFrame;
-        contentWidth += 320;
-        NSLog(@"rect %f, %f, %f, %f", photoView.frame.origin.x, photoView.frame.origin.y, photoView.frame.size.width, photoView.frame.size.height);
-    }
-    
-    self.imageGallery.contentSize = CGSizeMake(contentWidth, self.view.frame.size.height);
+}
+
+
+- (void)loadLandscapes {
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:[NSString stringWithFormat:@"%@getLandscape", kServerURL] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+
+        float contentWidth = 0;
+
+        for (NSDictionary *lscape in responseObject) {
+            EPALandscape *l = [[EPALandscape alloc] initWithDictionary:lscape];
+
+            UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(contentWidth, 0, 320, self.view.frame.size.height)];
+            [image sd_setImageWithURL:[NSURL URLWithString:l.imageUrl] placeholderImage:[UIImage imageNamed:@"favicon.ico"]];
+            [self.imageGallery addSubview:image];
+            [self.photos addObject:image];
+            contentWidth += 320;
+        }
+
+        _imageGallery.contentSize = CGSizeMake(contentWidth, self.view.frame.size.height);
+
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
+    [self loadLandscapes];
     [self prepContent];
     // Do any additional setup after loading the view from its nib.
 }
