@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="877bf08c-0582-4d24-9bae-b22c5eb510c7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EnPleinAir/EPASlidingImageCell.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EnPleinAir/EPASlidingImageCell.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EnPleinAir.xcworkspace/xcuserdata/seanbrady.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/EnPleinAir.xcworkspace/xcuserdata/seanbrady.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EnPleinAir/EPASlidingImageViewController.h" afterPath="$PROJECT_DIR$/EnPleinAir/EPASlidingImageViewController.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EnPleinAir/EPASlidingImageViewController.m" afterPath="$PROJECT_DIR$/EnPleinAir/EPASlidingImageViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EnPleinAir/EnPleinAirStoryboard.storyboard" afterPath="$PROJECT_DIR$/EnPleinAir/EnPleinAirStoryboard.storyboard" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EnPleinAir.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/EnPleinAir.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/en-plein-air/dataModel.py" afterPath="$PROJECT_DIR$/server/en-plein-air/dataModel.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/en-plein-air/main.py" afterPath="$PROJECT_DIR$/server/en-plein-air/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/en-plein-air/.idea/workspace.xml" afterPath="$PROJECT_DIR$/server/en-plein-air/.idea/workspace.xml" />
     </list>
     <ignored path="EnPleinAir.iws" />
     <ignored path=".idea/workspace.xml" />

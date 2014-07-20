@@ -23,7 +23,6 @@ class MainHandler(webapp2.RequestHandler):
         self.response.write('Hello world!')
 
 app = webapp2.WSGIApplication([
-    ('/', MainHandler),
     ('/addData', testData.AddTestData),
     ('/getLandscape', api.GetLandscapes)
 
