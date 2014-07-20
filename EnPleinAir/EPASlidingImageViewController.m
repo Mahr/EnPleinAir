@@ -12,6 +12,8 @@
 #import "constants.h"
 #import "EPALandscape.h"
 #import "UIImageView+WebCache.h"
+#import "EPASlidingImageCell.h"
+#import "SDWebImagePrefetcher.h"
 
 @interface EPASlidingImageViewController ()
 
@@ -36,12 +38,6 @@
 //    [imageGallery addSubview:spinnyCircle];
 //    [spinnyCircle startAnimating];
     
-    float contentWidth = 0;
-    
-
-    _imageGallery.scrollsToTop = NO;
-    _imageGallery.delegate = self;
-
     self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
@@ -50,28 +46,48 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:[NSString stringWithFormat:@"%@getLandscape", kServerURL] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
 
-        float contentWidth = 0;
+        NSMutableArray *imagesToLoad = [@[] mutableCopy];
 
         for (NSDictionary *lscape in responseObject) {
             EPALandscape *l = [[EPALandscape alloc] initWithDictionary:lscape];
 
-            UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(contentWidth, 0, 320, self.view.frame.size.height)];
-            [image sd_setImageWithURL:[NSURL URLWithString:l.imageUrl] placeholderImage:[UIImage imageNamed:@"favicon.ico"]];
-            [self.imageGallery addSubview:image];
-            [self.photos addObject:image];
-            contentWidth += 320;
+            if (!_landscapes)
+                _landscapes = [@[] mutableCopy];
+
+            [_landscapes addObject:l];
+            [imagesToLoad addObject:[NSURL URLWithString:l.imageUrl]];
+
         }
 
-        _imageGallery.contentSize = CGSizeMake(contentWidth, self.view.frame.size.height);
+        [[SDWebImagePrefetcher sharedImagePrefetcher] prefetchURLs:imagesToLoad];
+        [_imageCollectionView reloadData];
 
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
 }
 
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return [_landscapes count];
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    EPASlidingImageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SlidingImageCell" forIndexPath:indexPath];
+
+    EPALandscape *lscape = _landscapes[(NSUInteger)indexPath.row];
+    [cell.primaryImage sd_setImageWithURL:[NSURL URLWithString:lscape.imageUrl] placeholderImage:[UIImage imageNamed:@"favicon.ico"]];
+
+    return cell;
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    _imageCollectionView.delegate = self;
+    _imageCollectionView.dataSource = self;
 
     [self loadLandscapes];
     [self prepContent];

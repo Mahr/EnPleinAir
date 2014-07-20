@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EPASlidingImageViewController : UIViewController <UIScrollViewDelegate>
+@interface EPASlidingImageViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UIScrollView *imageGallery;
+@property (weak, nonatomic) IBOutlet UICollectionView *imageCollectionView;
 
+@property (nonatomic, strong) NSMutableArray *landscapes;
 @property(nonatomic, strong) NSMutableArray *photos;
 
 @end

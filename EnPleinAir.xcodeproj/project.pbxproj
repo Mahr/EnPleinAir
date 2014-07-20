@@ -21,6 +21,7 @@
 		14B068C2191872B7006D9CC0 /* EnPleinAirTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B068C1191872B7006D9CC0 /* EnPleinAirTests.m */; };
 		14B068CE19187416006D9CC0 /* EPASlidingImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B068CC19187416006D9CC0 /* EPASlidingImageViewController.m */; };
 		26283841197C4CB400A7029E /* EnPleinAirStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26283840197C4CB400A7029E /* EnPleinAirStoryboard.storyboard */; };
+		26283845197C577700A7029E /* EPASlidingImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26283844197C577700A7029E /* EPASlidingImageCell.m */; };
 		63206262E6D4B962DF675D1D /* EPALandscape.m in Sources */ = {isa = PBXBuildFile; fileRef = 63206ED613FDE82692ADA1E8 /* EPALandscape.m */; };
 		FED54C346E5942E1A87CEBD0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B17A70BED247F8A1A6B876 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,8 @@
 		25B17A70BED247F8A1A6B876 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		26283840197C4CB400A7029E /* EnPleinAirStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EnPleinAirStoryboard.storyboard; sourceTree = "<group>"; };
 		26283842197C4EF100A7029E /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		26283843197C577700A7029E /* EPASlidingImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPASlidingImageCell.h; sourceTree = "<group>"; };
+		26283844197C577700A7029E /* EPASlidingImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPASlidingImageCell.m; sourceTree = "<group>"; };
 		63206D48AE080785DF0B2D0D /* EPALandscape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPALandscape.h; sourceTree = "<group>"; };
 		63206ED613FDE82692ADA1E8 /* EPALandscape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPALandscape.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +134,8 @@
 				26283840197C4CB400A7029E /* EnPleinAirStoryboard.storyboard */,
 				26283842197C4EF100A7029E /* constants.h */,
 				63206AD747C174EEB3A62A00 /* API */,
+				26283843197C577700A7029E /* EPASlidingImageCell.h */,
+				26283844197C577700A7029E /* EPASlidingImageCell.m */,
 			);
 			path = EnPleinAir;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 				14B068A9191872B7006D9CC0 /* main.m in Sources */,
 				14B068AD191872B7006D9CC0 /* EPAAppDelegate.m in Sources */,
 				63206262E6D4B962DF675D1D /* EPALandscape.m in Sources */,
+				26283845197C577700A7029E /* EPASlidingImageCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
