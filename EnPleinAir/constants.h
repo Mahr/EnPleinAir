@@ -10,8 +10,11 @@
 #define EnPleinAir_constants_h
 
 
-#define kServerURL @"http://localhost:10080/"
 //#define kServerURL @"http://localhost:10080/"
+//#define kServerURL @"http://localhost:10080/"
+
+#define kServerURL @"http://en-plein-air.appspot.com/"
+
 
 
 #endif

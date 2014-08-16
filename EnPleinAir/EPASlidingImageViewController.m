@@ -44,7 +44,7 @@
 
 - (void)loadLandscapes {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:[NSString stringWithFormat:@"%@getLandscape", kServerURL] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:[NSString stringWithFormat:@"%@landscape", kServerURL] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
 
         NSMutableArray *imagesToLoad = [@[] mutableCopy];
 

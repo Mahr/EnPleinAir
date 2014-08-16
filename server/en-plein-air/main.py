@@ -24,6 +24,7 @@ class MainHandler(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     ('/addData', testData.AddTestData),
-    ('/getLandscape', api.GetLandscapes)
+    ('/landscape', api.GetLandscapes),
+    ('/theme', api.GetThemes)
 
 ], debug=True)
