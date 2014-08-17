@@ -15,4 +15,5 @@
 @property (nonatomic, strong) NSMutableArray *landscapes;
 @property(nonatomic, strong) NSMutableArray *photos;
 
+@property(nonatomic, copy) NSString *theme_id;
 @end

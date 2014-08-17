@@ -14,6 +14,8 @@
 #import "UIImageView+WebCache.h"
 #import "EPASlidingImageCell.h"
 #import "SDWebImagePrefetcher.h"
+#import "EPAUtilities.h"
+#import "EPALandscapeInfoViewController.h"
 
 @interface EPASlidingImageViewController ()
 
@@ -30,6 +32,11 @@
     return self;
 }
 
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
 - (void)prepContent {
     // Activity indicator
 //    DDLogInfo(@"Adding spinny circle. On %@ thread.", [NSThread isMainThread] ? @"Main": @"Background");
@@ -43,8 +50,12 @@
 
 
 - (void)loadLandscapes {
+    NSDictionary *params = nil;
+    if (_theme_id)
+        params = @{@"theme_id":_theme_id};
+
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:[NSString stringWithFormat:@"%@landscape", kServerURL] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:[NSString stringWithFormat:@"%@landscape", kServerURL] parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
 
         NSMutableArray *imagesToLoad = [@[] mutableCopy];
 
@@ -76,9 +87,34 @@
     EPASlidingImageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SlidingImageCell" forIndexPath:indexPath];
 
     EPALandscape *lscape = _landscapes[(NSUInteger)indexPath.row];
-    [cell.primaryImage sd_setImageWithURL:[NSURL URLWithString:lscape.imageUrl] placeholderImage:[UIImage imageNamed:@"favicon.ico"]];
+
+    NSString *optimizedURL = [EPAUtilities cloudinaryToJPG:lscape.imageUrl];
+    optimizedURL = [EPAUtilities cloudinaryScaleImage:optimizedURL forFrame:cell.primaryImage.frame retina:YES];
+
+    [cell.primaryImage sd_setImageWithURL:[NSURL URLWithString:optimizedURL] placeholderImage:nil];
 
     return cell;
+}
+
+
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    self.navigationController.navigationBarHidden = !self.navigationController.navigationBarHidden;
+}
+
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"LandscapeInfoSegue"]) {
+        NSArray *selectedItems = [self.imageCollectionView indexPathsForSelectedItems];
+        if (selectedItems) {
+            NSIndexPath *indexPath = selectedItems[0];
+
+            EPALandscapeInfoViewController *vc = segue.destinationViewController;
+            EPALandscape *l = _landscapes[(NSUInteger)indexPath.row];
+            vc.landscape = l;
+        }
+    }
 }
 
 
@@ -91,8 +127,19 @@
 
     [self loadLandscapes];
     [self prepContent];
+
+//    self.navigationController.navigationBarHidden = NO;
     // Do any additional setup after loading the view from its nib.
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
+- (void)hideNavBar {
+    self.navigationController.navigationBarHidden = YES;
+}
+
 
 - (void)didReceiveMemoryWarning
 {

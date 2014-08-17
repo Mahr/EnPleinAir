@@ -7,6 +7,7 @@
 //
 
 #import "EPAAppDelegate.h"
+#import <Crashlytics/Crashlytics.h>
 
 @implementation EPAAppDelegate
 
@@ -20,6 +21,8 @@
     
 //    EPASlidingImageViewController *svc = [[EPASlidingImageViewController alloc] init];
 //    [navController pushViewController:svc animated:NO];
+    
+    [Crashlytics startWithAPIKey:@"a443dbf23984ab55e1ffbccb85bdb3290745088c"];
     
     [self.window makeKeyAndVisible];
     return YES;

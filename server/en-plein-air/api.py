@@ -14,6 +14,7 @@ from datetime import datetime, date, time
 
 from dataModel import Landscape
 from dataModel import Theme
+from dataModel import Themescape
 
 
 import webapp2
@@ -24,16 +25,19 @@ from google.appengine.api import memcache
 class GetLandscapes(webapp2.RequestHandler):
 
     def get(self):
-        theme_id = self.request["theme_id"]
 
-        qry = Landscape.query()
 
-        resArray = []
-        for landscape in qry.fetch(10, offset=0):
-            resArray.append(landscape.toJson())
+        theme_id = self.request.get("theme_id")
+        theme_key = ndb.Key(Theme, theme_id)
+
+        themescapes = Themescape.query(Themescape.theme == theme_key).fetch()
+
+        outArray = []
+        for themescape in themescapes:
+            outArray.append(themescape.landscape.get().toJson())
 
         self.response.headers['Content-Type'] = "application/json"
-        self.response.write(json.dumps(resArray))
+        self.response.write(json.dumps(outArray))
 
 
 
