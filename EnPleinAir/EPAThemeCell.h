@@ -14,6 +14,8 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *blurredImage;
+@property (weak, nonatomic) IBOutlet UIView *blurMask;
 
 @property (strong, nonatomic) EPATheme *theme;
 

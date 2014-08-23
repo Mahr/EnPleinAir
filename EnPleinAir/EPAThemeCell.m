@@ -10,6 +10,7 @@
 #import "EPAThemeCell.h"
 #import "EPATheme.h"
 #import "EPAUtilities.h"
+#import "UIImage+ImageEffects.h"
 
 @implementation EPAThemeCell
 
@@ -24,8 +25,18 @@
 
 - (void)prepContent {
     _nameLabel.text = _theme.name;
-    [_image sd_setImageWithURL:[NSURL URLWithString:self.optimizedImage] placeholderImage:[UIImage imageNamed:@"favicon.ico"]];
 
+    // Create a mask layer and the frame to determine what will be visible in the view.
+    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+    CGPathRef path = CGPathCreateWithRect(_blurMask.frame, NULL);
+    maskLayer.path = path;
+    CGPathRelease(path);
+
+    _blurredImage.layer.mask = maskLayer;
+
+    [_image sd_setImageWithURL:[NSURL URLWithString:self.optimizedImage] placeholderImage:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        [_blurredImage setImage:[image applyLightEffect]];
+    }];
 }
 
 

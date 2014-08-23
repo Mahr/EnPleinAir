@@ -23,6 +23,7 @@
 		261DA8F519A94364008F60AA /* EPALandscapeDesignCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 261DA8F419A94364008F60AA /* EPALandscapeDesignCell.m */; };
 		261DA8F819A94381008F60AA /* EPAMoreInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 261DA8F719A94381008F60AA /* EPAMoreInfoCell.m */; };
 		261DA8FB19A94C67008F60AA /* BasicWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 261DA8FA19A94C67008F60AA /* BasicWebViewController.m */; };
+		261DA8FE19A94FEB008F60AA /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 261DA8FD19A94FEB008F60AA /* UIImage+ImageEffects.m */; };
 		26283841197C4CB400A7029E /* EnPleinAirStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26283840197C4CB400A7029E /* EnPleinAirStoryboard.storyboard */; };
 		26283845197C577700A7029E /* EPASlidingImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26283844197C577700A7029E /* EPASlidingImageCell.m */; };
 		269EE6DF19A107D3003CDFC7 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269EE6DE19A107D3003CDFC7 /* Crashlytics.framework */; };
@@ -74,6 +75,8 @@
 		261DA8F719A94381008F60AA /* EPAMoreInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPAMoreInfoCell.m; sourceTree = "<group>"; };
 		261DA8F919A94C67008F60AA /* BasicWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicWebViewController.h; sourceTree = "<group>"; };
 		261DA8FA19A94C67008F60AA /* BasicWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicWebViewController.m; sourceTree = "<group>"; };
+		261DA8FC19A94FEB008F60AA /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		261DA8FD19A94FEB008F60AA /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		26283840197C4CB400A7029E /* EnPleinAirStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EnPleinAirStoryboard.storyboard; sourceTree = "<group>"; };
 		26283842197C4EF100A7029E /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
 		26283843197C577700A7029E /* EPASlidingImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPASlidingImageCell.h; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 		14B068A2191872B7006D9CC0 /* EnPleinAir */ = {
 			isa = PBXGroup;
 			children = (
+				261DA8FC19A94FEB008F60AA /* UIImage+ImageEffects.h */,
+				261DA8FD19A94FEB008F60AA /* UIImage+ImageEffects.m */,
 				261DA8F919A94C67008F60AA /* BasicWebViewController.h */,
 				261DA8FA19A94C67008F60AA /* BasicWebViewController.m */,
 				14B068AB191872B7006D9CC0 /* EPAAppDelegate.h */,
@@ -378,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				261DA8FE19A94FEB008F60AA /* UIImage+ImageEffects.m in Sources */,
 				26A221D8199FE241003E84D6 /* EPAThemeCell.m in Sources */,
 				261DA8F819A94381008F60AA /* EPAMoreInfoCell.m in Sources */,
 				14B068CE19187416006D9CC0 /* EPASlidingImageViewController.m in Sources */,
