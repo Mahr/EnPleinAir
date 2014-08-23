@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EPASlidingImageViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface EPASlidingImageViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *imageCollectionView;
 

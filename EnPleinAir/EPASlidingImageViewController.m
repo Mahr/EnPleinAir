@@ -37,6 +37,30 @@
     return YES;
 }
 
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+    _imageCollectionView.delegate = self;
+    _imageCollectionView.dataSource = self;
+
+    [self loadLandscapes];
+    [self prepContent];
+
+//    self.navigationController.navigationBarHidden = NO;
+    // Do any additional setup after loading the view from its nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
+- (void)hideNavBar {
+    self.navigationController.navigationBarHidden = YES;
+}
+
+
 - (void)prepContent {
     // Activity indicator
 //    DDLogInfo(@"Adding spinny circle. On %@ thread.", [NSThread isMainThread] ? @"Main": @"Background");
@@ -87,11 +111,10 @@
     EPASlidingImageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SlidingImageCell" forIndexPath:indexPath];
 
     EPALandscape *lscape = _landscapes[(NSUInteger)indexPath.row];
+    cell.landscape = lscape;
 
-    NSString *optimizedURL = [EPAUtilities cloudinaryToJPG:lscape.imageUrl];
-    optimizedURL = [EPAUtilities cloudinaryScaleImage:optimizedURL forFrame:cell.primaryImage.frame retina:YES];
+    [cell prepContent];
 
-    [cell.primaryImage sd_setImageWithURL:[NSURL URLWithString:optimizedURL] placeholderImage:nil];
 
     return cell;
 }
@@ -117,28 +140,6 @@
     }
 }
 
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-
-    _imageCollectionView.delegate = self;
-    _imageCollectionView.dataSource = self;
-
-    [self loadLandscapes];
-    [self prepContent];
-
-//    self.navigationController.navigationBarHidden = NO;
-    // Do any additional setup after loading the view from its nib.
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-
-- (void)hideNavBar {
-    self.navigationController.navigationBarHidden = YES;
-}
 
 
 - (void)didReceiveMemoryWarning

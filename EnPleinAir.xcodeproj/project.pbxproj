@@ -24,6 +24,8 @@
 		26283845197C577700A7029E /* EPASlidingImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26283844197C577700A7029E /* EPASlidingImageCell.m */; };
 		269EE6DF19A107D3003CDFC7 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269EE6DE19A107D3003CDFC7 /* Crashlytics.framework */; };
 		269EE6E219A14201003CDFC7 /* EPALandscapeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269EE6E119A14201003CDFC7 /* EPALandscapeInfoViewController.m */; };
+		269EE6E519A6D5FE003CDFC7 /* EPAPlantTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 269EE6E419A6D5FE003CDFC7 /* EPAPlantTableViewCell.m */; };
+		269EE6E819A6D8AB003CDFC7 /* EPAPlant.m in Sources */ = {isa = PBXBuildFile; fileRef = 269EE6E719A6D8AB003CDFC7 /* EPAPlant.m */; };
 		26A221D8199FE241003E84D6 /* EPAThemeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A221D7199FE241003E84D6 /* EPAThemeCell.m */; };
 		26A221DE199FE344003E84D6 /* EPAThemeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A221DD199FE344003E84D6 /* EPAThemeViewController.m */; };
 		63206262E6D4B962DF675D1D /* EPALandscape.m in Sources */ = {isa = PBXBuildFile; fileRef = 63206ED613FDE82692ADA1E8 /* EPALandscape.m */; };
@@ -70,6 +72,10 @@
 		269EE6DE19A107D3003CDFC7 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		269EE6E019A14201003CDFC7 /* EPALandscapeInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPALandscapeInfoViewController.h; sourceTree = "<group>"; };
 		269EE6E119A14201003CDFC7 /* EPALandscapeInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPALandscapeInfoViewController.m; sourceTree = "<group>"; };
+		269EE6E319A6D5FE003CDFC7 /* EPAPlantTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPAPlantTableViewCell.h; sourceTree = "<group>"; };
+		269EE6E419A6D5FE003CDFC7 /* EPAPlantTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPAPlantTableViewCell.m; sourceTree = "<group>"; };
+		269EE6E619A6D8AB003CDFC7 /* EPAPlant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPAPlant.h; sourceTree = "<group>"; };
+		269EE6E719A6D8AB003CDFC7 /* EPAPlant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPAPlant.m; sourceTree = "<group>"; };
 		26A221D6199FE241003E84D6 /* EPAThemeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPAThemeCell.h; sourceTree = "<group>"; };
 		26A221D7199FE241003E84D6 /* EPAThemeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPAThemeCell.m; sourceTree = "<group>"; };
 		26A221DC199FE344003E84D6 /* EPAThemeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPAThemeViewController.h; sourceTree = "<group>"; };
@@ -163,6 +169,8 @@
 				6320619A7FF17EDE3C4ED6B7 /* EPAUtilities.h */,
 				269EE6E019A14201003CDFC7 /* EPALandscapeInfoViewController.h */,
 				269EE6E119A14201003CDFC7 /* EPALandscapeInfoViewController.m */,
+				269EE6E319A6D5FE003CDFC7 /* EPAPlantTableViewCell.h */,
+				269EE6E419A6D5FE003CDFC7 /* EPAPlantTableViewCell.m */,
 			);
 			path = EnPleinAir;
 			sourceTree = "<group>";
@@ -203,6 +211,8 @@
 				63206D48AE080785DF0B2D0D /* EPALandscape.h */,
 				63206D4B16F9F069AF9172EE /* EPATheme.m */,
 				6320688C58D8F03A3177A09D /* EPATheme.h */,
+				269EE6E619A6D8AB003CDFC7 /* EPAPlant.h */,
+				269EE6E719A6D8AB003CDFC7 /* EPAPlant.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -359,6 +369,8 @@
 				26A221DE199FE344003E84D6 /* EPAThemeViewController.m in Sources */,
 				14B068AD191872B7006D9CC0 /* EPAAppDelegate.m in Sources */,
 				63206262E6D4B962DF675D1D /* EPALandscape.m in Sources */,
+				269EE6E819A6D8AB003CDFC7 /* EPAPlant.m in Sources */,
+				269EE6E519A6D5FE003CDFC7 /* EPAPlantTableViewCell.m in Sources */,
 				26283845197C577700A7029E /* EPASlidingImageCell.m in Sources */,
 				632064963B535D262F10926F /* EPATheme.m in Sources */,
 				269EE6E219A14201003CDFC7 /* EPALandscapeInfoViewController.m in Sources */,

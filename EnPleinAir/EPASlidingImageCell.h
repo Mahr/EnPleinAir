@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EPASlidingImageCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *primaryImage;
+@class EPALandscape;
 
+@interface EPASlidingImageCell : UICollectionViewCell <UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UIImageView *primaryImage;
+@property (weak, nonatomic) IBOutlet UITableView *plantTableView;
+
+@property (strong, nonatomic) IBOutlet EPALandscape *landscape;
+
+@property(nonatomic, strong) NSMutableArray *plants;
+
+- (void)prepContent;
 @end
