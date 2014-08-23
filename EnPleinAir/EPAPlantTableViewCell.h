@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionText;
 
+@property (strong, nonatomic) UIViewController *parentVC;
+
 @property (strong, nonatomic) EPAPlant *plant;
 
 - (void)prepContent;

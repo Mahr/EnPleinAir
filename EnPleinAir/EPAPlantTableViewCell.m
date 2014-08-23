@@ -11,6 +11,7 @@
 #import "EPAPlant.h"
 #import "EPAUtilities.h"
 #import "UIView+WebCacheOperation.h"
+#import "BasicWebViewController.h"
 
 @implementation EPAPlantTableViewCell
 
@@ -44,5 +45,15 @@
     optimizedURL = [EPAUtilities cloudinaryScaleImage:optimizedURL forFrame:_plantImage.frame retina:YES];
     [_plantImage sd_setImageWithURL:[NSURL URLWithString:optimizedURL] placeholderImage:nil];
 }
+
+- (IBAction)doPlantInfo:(id)sender {
+    BasicWebViewController *bwvc = [[BasicWebViewController alloc] initWithURL:_plant.link];
+    bwvc.title = _plant.name;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.parentVC.navigationController pushViewController:bwvc animated:YES];
+    });
+    
+}
+
 
 @end

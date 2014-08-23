@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "14B06898191872B7006D9CC0"
-               BuildableName = "EnPleinAir.app"
-               BlueprintName = "EnPleinAir"
+               BuildableName = "EnPleinAire.app"
+               BlueprintName = "EnPleinAire"
                ReferencedContainer = "container:EnPleinAir.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,7 +44,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "14B06898191872B7006D9CC0"
             BuildableName = "EnPleinAir.app"
-            BlueprintName = "EnPleinAir"
+            BlueprintName = "EnPleinAire"
             ReferencedContainer = "container:EnPleinAir.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "14B06898191872B7006D9CC0"
-            BuildableName = "EnPleinAir.app"
-            BlueprintName = "EnPleinAir"
+            BuildableName = "EnPleinAire.app"
+            BlueprintName = "EnPleinAire"
             ReferencedContainer = "container:EnPleinAir.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -81,7 +81,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "14B06898191872B7006D9CC0"
             BuildableName = "EnPleinAir.app"
-            BlueprintName = "EnPleinAir"
+            BlueprintName = "EnPleinAire"
             ReferencedContainer = "container:EnPleinAir.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

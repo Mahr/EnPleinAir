@@ -18,6 +18,7 @@
         self.id = jsonData[@"id"];
         self.imageUrl = jsonData[@"image_url"];
         self.description = jsonData[@"description"];
+        self.link = jsonData[@"link"];
     }
 
     return self;

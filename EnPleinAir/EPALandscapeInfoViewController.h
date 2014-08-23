@@ -10,7 +10,13 @@
 
 @class EPALandscape;
 
-@interface EPALandscapeInfoViewController : UICollectionViewController
+@interface EPALandscapeInfoViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property(nonatomic, strong) EPALandscape *landscape;
+@property(nonatomic, strong) NSMutableArray *plants;
+@property(nonatomic) CGFloat landscapeHeight;
+@property(nonatomic) CGFloat moreInfoHeight;
+@property(nonatomic) CGFloat plantHeight;
 @end

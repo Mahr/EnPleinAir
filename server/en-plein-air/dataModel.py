@@ -7,9 +7,11 @@ class Landscape(ndb.Model):
     name = ndb.StringProperty(required=False)
     description = ndb.StringProperty(required=False)
     date_added = ndb.DateTimeProperty(auto_now_add=True)
+    designer = ndb.StringProperty(required=False)
+    designer_website = ndb.StringProperty(required=False)
 
     def toJson(self):
-        return {"id":self.key.id(), "image_url":self.image_url, "name":self.name, "description":self.description, "date_added":str(self.date_added)}
+        return {"id":self.key.id(), "image_url":self.image_url, "name":self.name, "description":self.description, "designer":self.designer, "designer_website":self.designer_website, "date_added":str(self.date_added)}
 
 
 class Plant(ndb.Model):
@@ -17,9 +19,10 @@ class Plant(ndb.Model):
     name = ndb.StringProperty(required=False)
     latin_name = ndb.StringProperty(required=False)
     description = ndb.StringProperty(required=False)
+    link = ndb.StringProperty(required=False)
 
     def toJson(self):
-        return {"id":self.key.id(), "image_url":self.image_url, "name":self.name, "latin_name":self.latin_name, "description":self.description}
+        return {"id":self.key.id(), "image_url":self.image_url, "name":self.name, "latin_name":self.latin_name, "description":self.description, "link":self.link}
 
 
 class Theme(ndb.Model):

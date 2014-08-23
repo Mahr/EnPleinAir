@@ -45,8 +45,10 @@ def loadLandscape():
             name = entry['gsx$name']['$t']
             description = entry['gsx$description']['$t']
             lscape_url = entry['gsx$url']['$t']
+            designer = entry['gsx$designer']['$t']
+            designer_website = entry['gsx$designerwebsite']['$t']
 
-            testData.addLandscape(id, name, description, lscape_url)
+            testData.addLandscape(id, name, description, lscape_url, designer, designer_website)
 
 
 def loadPlant():
@@ -68,8 +70,9 @@ def loadPlant():
             latin_name = entry['gsx$latinname']['$t']
             description = entry['gsx$description']['$t']
             lscape_url = entry['gsx$url']['$t']
+            link = entry['gsx$link']['$t']
 
-            testData.addPlant(id, name, latin_name, description, lscape_url)
+            testData.addPlant(id, name, latin_name, description, lscape_url, link)
 
 
 def loadTheme():
@@ -142,13 +145,13 @@ def deleteTable(name):
         ndb.delete_multi(q.fetch(200))
 
 
-def addLandscape(id, name, description, image):
-    landscape = dataModel.Landscape(id = id, image_url = image, name = name, description = description)
+def addLandscape(id, name, description, image, designer, designer_website):
+    landscape = dataModel.Landscape(id = id, image_url = image, name = name, description = description, designer = designer, designer_website = designer_website)
     return landscape.put()
 
-def addPlant(id, name, latin_name, description, image_url):
+def addPlant(id, name, latin_name, description, image_url, link):
     #Should check to see if latin name already taken
-    plant = dataModel.Plant(id = id, name = name, latin_name = latin_name, description = description, image_url = image_url)
+    plant = dataModel.Plant(id = id, name = name, latin_name = latin_name, description = description, image_url = image_url, link = link)
     return plant.put()
 
 def addTheme(id, name, image_url):

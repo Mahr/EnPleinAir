@@ -20,6 +20,9 @@
 		14B068C0191872B7006D9CC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14B068BE191872B7006D9CC0 /* InfoPlist.strings */; };
 		14B068C2191872B7006D9CC0 /* EnPleinAirTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B068C1191872B7006D9CC0 /* EnPleinAirTests.m */; };
 		14B068CE19187416006D9CC0 /* EPASlidingImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B068CC19187416006D9CC0 /* EPASlidingImageViewController.m */; };
+		261DA8F519A94364008F60AA /* EPALandscapeDesignCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 261DA8F419A94364008F60AA /* EPALandscapeDesignCell.m */; };
+		261DA8F819A94381008F60AA /* EPAMoreInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 261DA8F719A94381008F60AA /* EPAMoreInfoCell.m */; };
+		261DA8FB19A94C67008F60AA /* BasicWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 261DA8FA19A94C67008F60AA /* BasicWebViewController.m */; };
 		26283841197C4CB400A7029E /* EnPleinAirStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26283840197C4CB400A7029E /* EnPleinAirStoryboard.storyboard */; };
 		26283845197C577700A7029E /* EPASlidingImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26283844197C577700A7029E /* EPASlidingImageCell.m */; };
 		269EE6DF19A107D3003CDFC7 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269EE6DE19A107D3003CDFC7 /* Crashlytics.framework */; };
@@ -46,7 +49,7 @@
 
 /* Begin PBXFileReference section */
 		122D4602F6864430875A0A0E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		14B06899191872B7006D9CC0 /* EnPleinAir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnPleinAir.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14B06899191872B7006D9CC0 /* EnPleinAire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnPleinAire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14B0689C191872B7006D9CC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		14B0689E191872B7006D9CC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		14B068A0191872B7006D9CC0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -65,6 +68,12 @@
 		14B068CB19187416006D9CC0 /* EPASlidingImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPASlidingImageViewController.h; sourceTree = "<group>"; };
 		14B068CC19187416006D9CC0 /* EPASlidingImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPASlidingImageViewController.m; sourceTree = "<group>"; };
 		25B17A70BED247F8A1A6B876 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		261DA8F319A94364008F60AA /* EPALandscapeDesignCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPALandscapeDesignCell.h; sourceTree = "<group>"; };
+		261DA8F419A94364008F60AA /* EPALandscapeDesignCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPALandscapeDesignCell.m; sourceTree = "<group>"; };
+		261DA8F619A94381008F60AA /* EPAMoreInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPAMoreInfoCell.h; sourceTree = "<group>"; };
+		261DA8F719A94381008F60AA /* EPAMoreInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPAMoreInfoCell.m; sourceTree = "<group>"; };
+		261DA8F919A94C67008F60AA /* BasicWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicWebViewController.h; sourceTree = "<group>"; };
+		261DA8FA19A94C67008F60AA /* BasicWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicWebViewController.m; sourceTree = "<group>"; };
 		26283840197C4CB400A7029E /* EnPleinAirStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EnPleinAirStoryboard.storyboard; sourceTree = "<group>"; };
 		26283842197C4EF100A7029E /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
 		26283843197C577700A7029E /* EPASlidingImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPASlidingImageCell.h; sourceTree = "<group>"; };
@@ -128,7 +137,7 @@
 		14B0689A191872B7006D9CC0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				14B06899191872B7006D9CC0 /* EnPleinAir.app */,
+				14B06899191872B7006D9CC0 /* EnPleinAire.app */,
 				14B068B4191872B7006D9CC0 /* EnPleinAirTests.xctest */,
 			);
 			name = Products;
@@ -150,6 +159,8 @@
 		14B068A2191872B7006D9CC0 /* EnPleinAir */ = {
 			isa = PBXGroup;
 			children = (
+				261DA8F919A94C67008F60AA /* BasicWebViewController.h */,
+				261DA8FA19A94C67008F60AA /* BasicWebViewController.m */,
 				14B068AB191872B7006D9CC0 /* EPAAppDelegate.h */,
 				14B068AC191872B7006D9CC0 /* EPAAppDelegate.m */,
 				14B068AE191872B7006D9CC0 /* Images.xcassets */,
@@ -171,6 +182,10 @@
 				269EE6E119A14201003CDFC7 /* EPALandscapeInfoViewController.m */,
 				269EE6E319A6D5FE003CDFC7 /* EPAPlantTableViewCell.h */,
 				269EE6E419A6D5FE003CDFC7 /* EPAPlantTableViewCell.m */,
+				261DA8F319A94364008F60AA /* EPALandscapeDesignCell.h */,
+				261DA8F419A94364008F60AA /* EPALandscapeDesignCell.m */,
+				261DA8F619A94381008F60AA /* EPAMoreInfoCell.h */,
+				261DA8F719A94381008F60AA /* EPAMoreInfoCell.m */,
 			);
 			path = EnPleinAir;
 			sourceTree = "<group>";
@@ -220,9 +235,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		14B06898191872B7006D9CC0 /* EnPleinAir */ = {
+		14B06898191872B7006D9CC0 /* EnPleinAire */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14B068C5191872B7006D9CC0 /* Build configuration list for PBXNativeTarget "EnPleinAir" */;
+			buildConfigurationList = 14B068C5191872B7006D9CC0 /* Build configuration list for PBXNativeTarget "EnPleinAire" */;
 			buildPhases = (
 				F81056864BDE45D59393E3BB /* Check Pods Manifest.lock */,
 				14B06895191872B7006D9CC0 /* Sources */,
@@ -235,9 +250,9 @@
 			);
 			dependencies = (
 			);
-			name = EnPleinAir;
+			name = EnPleinAire;
 			productName = EnPleinAir;
-			productReference = 14B06899191872B7006D9CC0 /* EnPleinAir.app */;
+			productReference = 14B06899191872B7006D9CC0 /* EnPleinAire.app */;
 			productType = "com.apple.product-type.application";
 		};
 		14B068B3191872B7006D9CC0 /* EnPleinAirTests */ = {
@@ -285,7 +300,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				14B06898191872B7006D9CC0 /* EnPleinAir */,
+				14B06898191872B7006D9CC0 /* EnPleinAire */,
 				14B068B3191872B7006D9CC0 /* EnPleinAirTests */,
 			);
 		};
@@ -364,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26A221D8199FE241003E84D6 /* EPAThemeCell.m in Sources */,
+				261DA8F819A94381008F60AA /* EPAMoreInfoCell.m in Sources */,
 				14B068CE19187416006D9CC0 /* EPASlidingImageViewController.m in Sources */,
 				14B068A9191872B7006D9CC0 /* main.m in Sources */,
 				26A221DE199FE344003E84D6 /* EPAThemeViewController.m in Sources */,
@@ -371,7 +387,9 @@
 				63206262E6D4B962DF675D1D /* EPALandscape.m in Sources */,
 				269EE6E819A6D8AB003CDFC7 /* EPAPlant.m in Sources */,
 				269EE6E519A6D5FE003CDFC7 /* EPAPlantTableViewCell.m in Sources */,
+				261DA8F519A94364008F60AA /* EPALandscapeDesignCell.m in Sources */,
 				26283845197C577700A7029E /* EPASlidingImageCell.m in Sources */,
+				261DA8FB19A94C67008F60AA /* BasicWebViewController.m in Sources */,
 				632064963B535D262F10926F /* EPATheme.m in Sources */,
 				269EE6E219A14201003CDFC7 /* EPALandscapeInfoViewController.m in Sources */,
 				632066EAAE43CE771EC9706F /* EPAUtilities.m in Sources */,
@@ -391,7 +409,7 @@
 /* Begin PBXTargetDependency section */
 		14B068BA191872B7006D9CC0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 14B06898191872B7006D9CC0 /* EnPleinAir */;
+			target = 14B06898191872B7006D9CC0 /* EnPleinAire */;
 			targetProxy = 14B068B9191872B7006D9CC0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -576,7 +594,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14B068C5191872B7006D9CC0 /* Build configuration list for PBXNativeTarget "EnPleinAir" */ = {
+		14B068C5191872B7006D9CC0 /* Build configuration list for PBXNativeTarget "EnPleinAire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14B068C6191872B7006D9CC0 /* Debug */,
