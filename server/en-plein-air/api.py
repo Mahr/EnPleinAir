@@ -48,7 +48,7 @@ class GetThemes(webapp2.RequestHandler):
         qry = Theme.query()
 
         resArray = []
-        for theme in qry.fetch(10, offset=0):
+        for theme in qry.fetch(limit=30, offset=0):
             resArray.append(theme.toJson())
 
         self.response.headers['Content-Type'] = "application/json"

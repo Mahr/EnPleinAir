@@ -50,10 +50,6 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:[NSString stringWithFormat:@"%@theme", kServerURL] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
 
-
-
-//        NSMutableArray *imagesToLoad = [@[] mutableCopy];
-
         for (NSDictionary *thm in responseObject) {
             EPATheme *theme = [[EPATheme alloc] initWithDictionary:thm];
 
