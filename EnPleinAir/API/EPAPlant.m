@@ -17,7 +17,7 @@
         self.latinName = jsonData[@"latin_name"];
         self.id = jsonData[@"id"];
         self.imageUrl = jsonData[@"image_url"];
-        self.description = jsonData[@"description"];
+        self.desc = jsonData[@"description"];
         self.link = jsonData[@"link"];
     }
 

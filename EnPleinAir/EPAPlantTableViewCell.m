@@ -41,9 +41,9 @@
     _descriptionText.text = _plant.description;
     _nameLabel.text = [NSString stringWithFormat:@"%@ (%@)", _plant.name, _plant.latinName];
 
-    NSString *optimizedURL = [EPAUtilities cloudinaryToJPG:_plant.imageUrl];
-    optimizedURL = [EPAUtilities cloudinaryScaleImage:optimizedURL forFrame:_plantImage.frame retina:YES];
-    [_plantImage sd_setImageWithURL:[NSURL URLWithString:optimizedURL] placeholderImage:nil];
+//    NSString *optimizedURL = [EPAUtilities cloudinaryToJPG:_plant.imageUrl];
+//    optimizedURL = [EPAUtilities cloudinaryScaleImage:optimizedURL forFrame:_plantImage.frame retina:YES];
+    [_plantImage sd_setImageWithURL:[NSURL URLWithString:_plant.imageUrl] placeholderImage:nil];
 }
 
 - (IBAction)doPlantInfo:(id)sender {

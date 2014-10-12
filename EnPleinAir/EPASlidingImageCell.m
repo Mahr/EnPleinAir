@@ -31,10 +31,11 @@
 
 
 - (void)prepContent {
-    NSString *optimizedURL = [EPAUtilities cloudinaryToJPG:_landscape.imageUrl];
-    optimizedURL = [EPAUtilities cloudinaryScaleImage:optimizedURL forFrame:_primaryImage.frame retina:YES];
+//    NSString *optimizedURL = [EPAUtilities cloudinaryToJPG:_landscape.imageUrl];
+//    optimizedURL = [EPAUtilities cloudinaryScaleImage:optimizedURL forFrame:_primaryImage.frame retina:YES];
 
-    [_primaryImage sd_setImageWithURL:[NSURL URLWithString:optimizedURL] placeholderImage:nil];
+    [_primaryImage sd_setImageWithURL:[NSURL URLWithString:_landscape.imageUrl] placeholderImage:nil];
+    NSLog(@"Load landscape image %@", _landscape.imageUrl);
 
     [self loadPlants];
 }
@@ -55,14 +56,12 @@
         for (NSDictionary *plant in responseObject) {
             EPAPlant *p = [[EPAPlant alloc] initWithDictionary:plant];
 
-
-
             [_plants addObject:p];
-            [imagesToLoad addObject:[NSURL URLWithString:p.imageUrl]];
+//            [imagesToLoad addObject:[NSURL URLWithString:p.imageUrl]];
 
         }
 
-        [[SDWebImagePrefetcher sharedImagePrefetcher] prefetchURLs:imagesToLoad];
+//        [[SDWebImagePrefetcher sharedImagePrefetcher] prefetchURLs:imagesToLoad];
         [_plantTableView reloadData];
 
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

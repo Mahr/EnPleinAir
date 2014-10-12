@@ -49,7 +49,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		122D4602F6864430875A0A0E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		14B06899191872B7006D9CC0 /* EnPleinAire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnPleinAire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14B0689C191872B7006D9CC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		14B0689E191872B7006D9CC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -98,6 +97,8 @@
 		63206D48AE080785DF0B2D0D /* EPALandscape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPALandscape.h; sourceTree = "<group>"; };
 		63206D4B16F9F069AF9172EE /* EPATheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPATheme.m; sourceTree = "<group>"; };
 		63206ED613FDE82692ADA1E8 /* EPALandscape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPALandscape.m; sourceTree = "<group>"; };
+		A6D919EDC985EB0A7221A001 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CADD6596176C0D21684010D1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +127,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12E71065C61B81377ED861B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CADD6596176C0D21684010D1 /* Pods.debug.xcconfig */,
+				A6D919EDC985EB0A7221A001 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		14B06890191872B7006D9CC0 = {
 			isa = PBXGroup;
 			children = (
@@ -133,7 +143,7 @@
 				14B068BB191872B7006D9CC0 /* EnPleinAirTests */,
 				14B0689B191872B7006D9CC0 /* Frameworks */,
 				14B0689A191872B7006D9CC0 /* Products */,
-				122D4602F6864430875A0A0E /* Pods.xcconfig */,
+				12E71065C61B81377ED861B2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -288,6 +298,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Sean Brady";
 				TargetAttributes = {
+					14B06898191872B7006D9CC0 = {
+						DevelopmentTeam = 8RKDDP23WQ;
+					};
 					14B068B3191872B7006D9CC0 = {
 						TestTargetID = 14B06898191872B7006D9CC0;
 					};
@@ -358,7 +371,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F81056864BDE45D59393E3BB /* Check Pods Manifest.lock */ = {
@@ -512,10 +525,12 @@
 		};
 		14B068C6191872B7006D9CC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 122D4602F6864430875A0A0E /* Pods.xcconfig */;
+			baseConfigurationReference = CADD6596176C0D21684010D1 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -524,6 +539,7 @@
 				GCC_PREFIX_HEADER = "EnPleinAir/EnPleinAir-Prefix.pch";
 				INFOPLIST_FILE = "EnPleinAir/EnPleinAir-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -531,10 +547,12 @@
 		};
 		14B068C7191872B7006D9CC0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 122D4602F6864430875A0A0E /* Pods.xcconfig */;
+			baseConfigurationReference = A6D919EDC985EB0A7221A001 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -543,6 +561,7 @@
 				GCC_PREFIX_HEADER = "EnPleinAir/EnPleinAir-Prefix.pch";
 				INFOPLIST_FILE = "EnPleinAir/EnPleinAir-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;
 			};

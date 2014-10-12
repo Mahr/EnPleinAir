@@ -163,6 +163,20 @@
 }
 
 
+////TODO: Need to update SlidingImageViewController so it also knows about Plants.
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    if ([segue.identifier isEqualToString:@"PlantToLandscapeSegue"]) {
+//        NSIndexPath *indexPath = self.tableView indexPathForSelectedRow;
+//
+//        if (indexPath) {
+//            EPASlidingImageViewController *vc = segue.destinationViewController;
+//            EPATheme *t = _themes[(NSUInteger)indexPath.row];
+//            vc.theme_id = t.id;
+//        }
+//    }
+//}
+
+
 
 /*
 #pragma mark - Navigation

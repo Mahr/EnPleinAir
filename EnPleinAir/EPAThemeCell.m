@@ -34,7 +34,7 @@
 
     _blurredImage.layer.mask = maskLayer;
 
-    [_image sd_setImageWithURL:[NSURL URLWithString:self.optimizedImage] placeholderImage:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    [_image sd_setImageWithURL:[NSURL URLWithString:_theme.imageUrl] placeholderImage:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         [_blurredImage setImage:[image applyLightEffect]];
     }];
 }

@@ -14,7 +14,7 @@
 @property (nonatomic, strong) NSString *latinName;
 @property (nonatomic, strong) NSString *id;
 @property (nonatomic, strong) NSString *imageUrl;
-@property (nonatomic, strong) NSString *description;
+@property (nonatomic, strong) NSString *desc;
 @property (nonatomic, strong) NSString *link;
 
 - (id)initWithDictionary:(NSDictionary *)jsonData;
