@@ -12,5 +12,7 @@
 @property (nonatomic, strong) NSString *id;
 @property (nonatomic, strong) NSString *imageUrl;
 
+@property(nonatomic, strong) id desc;
+
 - (id)initWithDictionary:(NSDictionary *)jsonData;
 @end

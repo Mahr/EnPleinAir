@@ -26,6 +26,9 @@
 		261DA8FE19A94FEB008F60AA /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 261DA8FD19A94FEB008F60AA /* UIImage+ImageEffects.m */; };
 		26283841197C4CB400A7029E /* EnPleinAirStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26283840197C4CB400A7029E /* EnPleinAirStoryboard.storyboard */; };
 		26283845197C577700A7029E /* EPASlidingImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26283844197C577700A7029E /* EPASlidingImageCell.m */; };
+		265F2F1A19EB04FC0040BDA0 /* EPAThemeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 265F2F1919EB04FC0040BDA0 /* EPAThemeDetailViewController.m */; };
+		265F2F1D19EB101B0040BDA0 /* EPAThemeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 265F2F1C19EB101B0040BDA0 /* EPAThemeHeaderView.m */; };
+		265F2F2019EB21660040BDA0 /* EPALandscapeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 265F2F1F19EB21660040BDA0 /* EPALandscapeCell.m */; };
 		269EE6DF19A107D3003CDFC7 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269EE6DE19A107D3003CDFC7 /* Crashlytics.framework */; };
 		269EE6E219A14201003CDFC7 /* EPALandscapeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269EE6E119A14201003CDFC7 /* EPALandscapeInfoViewController.m */; };
 		269EE6E519A6D5FE003CDFC7 /* EPAPlantTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 269EE6E419A6D5FE003CDFC7 /* EPAPlantTableViewCell.m */; };
@@ -80,6 +83,12 @@
 		26283842197C4EF100A7029E /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
 		26283843197C577700A7029E /* EPASlidingImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPASlidingImageCell.h; sourceTree = "<group>"; };
 		26283844197C577700A7029E /* EPASlidingImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPASlidingImageCell.m; sourceTree = "<group>"; };
+		265F2F1819EB04FC0040BDA0 /* EPAThemeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPAThemeDetailViewController.h; sourceTree = "<group>"; };
+		265F2F1919EB04FC0040BDA0 /* EPAThemeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPAThemeDetailViewController.m; sourceTree = "<group>"; };
+		265F2F1B19EB101B0040BDA0 /* EPAThemeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPAThemeHeaderView.h; sourceTree = "<group>"; };
+		265F2F1C19EB101B0040BDA0 /* EPAThemeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPAThemeHeaderView.m; sourceTree = "<group>"; };
+		265F2F1E19EB21660040BDA0 /* EPALandscapeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPALandscapeCell.h; sourceTree = "<group>"; };
+		265F2F1F19EB21660040BDA0 /* EPALandscapeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPALandscapeCell.m; sourceTree = "<group>"; };
 		269EE6DE19A107D3003CDFC7 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		269EE6E019A14201003CDFC7 /* EPALandscapeInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPALandscapeInfoViewController.h; sourceTree = "<group>"; };
 		269EE6E119A14201003CDFC7 /* EPALandscapeInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPALandscapeInfoViewController.m; sourceTree = "<group>"; };
@@ -183,24 +192,19 @@
 				14B068CB19187416006D9CC0 /* EPASlidingImageViewController.h */,
 				14B068CC19187416006D9CC0 /* EPASlidingImageViewController.m */,
 				26283840197C4CB400A7029E /* EnPleinAirStoryboard.storyboard */,
-				26A221D6199FE241003E84D6 /* EPAThemeCell.h */,
-				26A221D7199FE241003E84D6 /* EPAThemeCell.m */,
 				26283842197C4EF100A7029E /* constants.h */,
+				265F2F2119EB216E0040BDA0 /* CElls */,
 				63206AD747C174EEB3A62A00 /* API */,
-				26283843197C577700A7029E /* EPASlidingImageCell.h */,
-				26283844197C577700A7029E /* EPASlidingImageCell.m */,
 				26A221DC199FE344003E84D6 /* EPAThemeViewController.h */,
 				26A221DD199FE344003E84D6 /* EPAThemeViewController.m */,
+				265F2F1819EB04FC0040BDA0 /* EPAThemeDetailViewController.h */,
+				265F2F1919EB04FC0040BDA0 /* EPAThemeDetailViewController.m */,
 				63206CCFD13A577CB792CE5A /* EPAUtilities.m */,
 				6320619A7FF17EDE3C4ED6B7 /* EPAUtilities.h */,
 				269EE6E019A14201003CDFC7 /* EPALandscapeInfoViewController.h */,
 				269EE6E119A14201003CDFC7 /* EPALandscapeInfoViewController.m */,
-				269EE6E319A6D5FE003CDFC7 /* EPAPlantTableViewCell.h */,
-				269EE6E419A6D5FE003CDFC7 /* EPAPlantTableViewCell.m */,
-				261DA8F319A94364008F60AA /* EPALandscapeDesignCell.h */,
-				261DA8F419A94364008F60AA /* EPALandscapeDesignCell.m */,
-				261DA8F619A94381008F60AA /* EPAMoreInfoCell.h */,
-				261DA8F719A94381008F60AA /* EPAMoreInfoCell.m */,
+				265F2F1B19EB101B0040BDA0 /* EPAThemeHeaderView.h */,
+				265F2F1C19EB101B0040BDA0 /* EPAThemeHeaderView.m */,
 			);
 			path = EnPleinAir;
 			sourceTree = "<group>";
@@ -232,6 +236,25 @@
 				14B068BE191872B7006D9CC0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		265F2F2119EB216E0040BDA0 /* CElls */ = {
+			isa = PBXGroup;
+			children = (
+				26283843197C577700A7029E /* EPASlidingImageCell.h */,
+				26283844197C577700A7029E /* EPASlidingImageCell.m */,
+				269EE6E319A6D5FE003CDFC7 /* EPAPlantTableViewCell.h */,
+				269EE6E419A6D5FE003CDFC7 /* EPAPlantTableViewCell.m */,
+				261DA8F319A94364008F60AA /* EPALandscapeDesignCell.h */,
+				261DA8F419A94364008F60AA /* EPALandscapeDesignCell.m */,
+				261DA8F619A94381008F60AA /* EPAMoreInfoCell.h */,
+				261DA8F719A94381008F60AA /* EPAMoreInfoCell.m */,
+				26A221D6199FE241003E84D6 /* EPAThemeCell.h */,
+				26A221D7199FE241003E84D6 /* EPAThemeCell.m */,
+				265F2F1E19EB21660040BDA0 /* EPALandscapeCell.h */,
+				265F2F1F19EB21660040BDA0 /* EPALandscapeCell.m */,
+			);
+			name = CElls;
 			sourceTree = "<group>";
 		};
 		63206AD747C174EEB3A62A00 /* API */ = {
@@ -400,14 +423,17 @@
 				26A221D8199FE241003E84D6 /* EPAThemeCell.m in Sources */,
 				261DA8F819A94381008F60AA /* EPAMoreInfoCell.m in Sources */,
 				14B068CE19187416006D9CC0 /* EPASlidingImageViewController.m in Sources */,
+				265F2F2019EB21660040BDA0 /* EPALandscapeCell.m in Sources */,
 				14B068A9191872B7006D9CC0 /* main.m in Sources */,
 				26A221DE199FE344003E84D6 /* EPAThemeViewController.m in Sources */,
 				14B068AD191872B7006D9CC0 /* EPAAppDelegate.m in Sources */,
 				63206262E6D4B962DF675D1D /* EPALandscape.m in Sources */,
+				265F2F1D19EB101B0040BDA0 /* EPAThemeHeaderView.m in Sources */,
 				269EE6E819A6D8AB003CDFC7 /* EPAPlant.m in Sources */,
 				269EE6E519A6D5FE003CDFC7 /* EPAPlantTableViewCell.m in Sources */,
 				261DA8F519A94364008F60AA /* EPALandscapeDesignCell.m in Sources */,
 				26283845197C577700A7029E /* EPASlidingImageCell.m in Sources */,
+				265F2F1A19EB04FC0040BDA0 /* EPAThemeDetailViewController.m in Sources */,
 				261DA8FB19A94C67008F60AA /* BasicWebViewController.m in Sources */,
 				632064963B535D262F10926F /* EPATheme.m in Sources */,
 				269EE6E219A14201003CDFC7 /* EPALandscapeInfoViewController.m in Sources */,
@@ -485,7 +511,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -517,7 +543,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

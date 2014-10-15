@@ -13,6 +13,7 @@
 #import "SDWebImagePrefetcher.h"
 #import "EPAThemeCell.h"
 #import "EPASlidingImageViewController.h"
+#import "EPAThemeDetailViewController.h"
 
 @interface EPAThemeViewController ()
 
@@ -106,7 +107,7 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 
-    [self performSegueWithIdentifier:@"ThemeToLandscapeSegue" sender:self];
+    [self performSegueWithIdentifier:@"ThemeToThemeDetailsSegue" sender:self];
 }
 
 
@@ -119,6 +120,16 @@
             EPASlidingImageViewController *vc = segue.destinationViewController;
             EPATheme *t = _themes[(NSUInteger)indexPath.row];
             vc.theme_id = t.id; 
+        }
+    }
+    else if ([segue.identifier isEqualToString:@"ThemeToThemeDetailsSegue"]) {
+        NSArray *selectedItems = [self.collectionView indexPathsForSelectedItems];
+        if (selectedItems) {
+            NSIndexPath *indexPath = selectedItems[0];
+            
+            EPAThemeDetailViewController *vc = segue.destinationViewController;
+            EPATheme *t = _themes[(NSUInteger)indexPath.row];
+            vc.theme = t;
         }
     }
 }

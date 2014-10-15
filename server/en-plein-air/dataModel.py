@@ -28,9 +28,10 @@ class Plant(ndb.Model):
 class Theme(ndb.Model):
     name = ndb.StringProperty(required=True)
     image_url = ndb.StringProperty(required=True)
+    description = ndb.StringProperty(required=False)
 
     def toJson(self):
-        return {"id":self.key.id(), "image_url":self.image_url, "name":self.name}
+        return {"id":self.key.id(), "image_url":self.image_url, "name":self.name, "description":self.description}
 
 
 class Plantscape(ndb.Model):

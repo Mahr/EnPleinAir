@@ -45,7 +45,6 @@
     _imageCollectionView.delegate = self;
     _imageCollectionView.dataSource = self;
 
-    [self loadLandscapes];
     [self prepContent];
 
 //    self.navigationController.navigationBarHidden = NO;
@@ -54,7 +53,16 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    if (_selectedItem)
+        [_imageCollectionView scrollToItemAtIndexPath:_selectedItem
+                                     atScrollPosition:UICollectionViewScrollPositionNone
+                                             animated:NO];
 }
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+
 
 - (void)hideNavBar {
     self.navigationController.navigationBarHidden = YES;
@@ -72,35 +80,6 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
-
-- (void)loadLandscapes {
-    NSDictionary *params = nil;
-    if (_theme_id)
-        params = @{@"theme_id":_theme_id};
-
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:[NSString stringWithFormat:@"%@landscape", kServerURL] parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-
-        NSMutableArray *imagesToLoad = [@[] mutableCopy];
-
-        for (NSDictionary *lscape in responseObject) {
-            EPALandscape *l = [[EPALandscape alloc] initWithDictionary:lscape];
-
-            if (!_landscapes)
-                _landscapes = [@[] mutableCopy];
-
-            [_landscapes addObject:l];
-            [imagesToLoad addObject:[NSURL URLWithString:l.imageUrl]];
-
-        }
-
-        [[SDWebImagePrefetcher sharedImagePrefetcher] prefetchURLs:imagesToLoad];
-        [_imageCollectionView reloadData];
-
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
-}
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -129,7 +108,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"LandscapeInfoSegue"]) {
-        NSArray *selectedItems = [self.imageCollectionView indexPathsForSelectedItems];
+        NSArray *selectedItems = [self.imageCollectionView indexPathsForVisibleItems];
         if (selectedItems) {
             NSIndexPath *indexPath = selectedItems[0];
 

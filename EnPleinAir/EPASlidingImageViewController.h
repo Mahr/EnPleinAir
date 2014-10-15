@@ -16,4 +16,5 @@
 @property(nonatomic, strong) NSMutableArray *photos;
 
 @property(nonatomic, copy) NSString *theme_id;
+@property(nonatomic, strong) NSIndexPath *selectedItem;
 @end

@@ -31,8 +31,8 @@
 
 
 - (void)prepContent {
-//    NSString *optimizedURL = [EPAUtilities cloudinaryToJPG:_landscape.imageUrl];
-//    optimizedURL = [EPAUtilities cloudinaryScaleImage:optimizedURL forFrame:_primaryImage.frame retina:YES];
+    NSString *optimizedURL = [EPAUtilities cloudinaryToJPG:_landscape.imageUrl];
+    optimizedURL = [EPAUtilities cloudinaryScaleImage:optimizedURL forFrame:_primaryImage.frame retina:YES];
 
     [_primaryImage sd_setImageWithURL:[NSURL URLWithString:_landscape.imageUrl] placeholderImage:nil];
     NSLog(@"Load landscape image %@", _landscape.imageUrl);

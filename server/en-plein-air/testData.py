@@ -92,8 +92,9 @@ def loadTheme():
             id = entry['gsx$id']['$t']
             name = entry['gsx$name']['$t']
             lscape_url = entry['gsx$url']['$t']
+            description = entry['gsx$description']['$t']
 
-            testData.addTheme(id, name, lscape_url)
+            testData.addTheme(id, name, lscape_url, description)
 
 
 def loadPlantscape():
@@ -154,8 +155,8 @@ def addPlant(id, name, latin_name, description, image_url, link):
     plant = dataModel.Plant(id = id, name = name, latin_name = latin_name, description = description, image_url = image_url, link = link)
     return plant.put()
 
-def addTheme(id, name, image_url):
-    theme = dataModel.Theme(id = id, name = name, image_url = image_url)
+def addTheme(id, name, image_url, description):
+    theme = dataModel.Theme(id = id, name = name, image_url = image_url, description = description)
     return theme.put()
 
 
